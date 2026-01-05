@@ -10,14 +10,14 @@ async function loadBooks() {
     allBooks = await response.json();
     displayBooks(allBooks);
   } catch (error) {
-    tbody.innerHTML = '<tr><td colspan="6" style="color:red;">Error loading books</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="5" style="color:red;">Error loading books</td></tr>';
   }
 }
 
 // Display books with +/- buttons
 function displayBooks(books) {
   if (books.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#666;">No books. Add first book!</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#666;">No books. Add first book!</td></tr>';
     return;
   }
   
